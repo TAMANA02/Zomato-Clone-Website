@@ -1,0 +1,146 @@
+/* signup.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('../img/signup-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  position: relative;
+  z-index: 0;
+}
+
+/* Semi-transparent white overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+ 
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background-color: #c62828;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* To ensure it stays above overlay */
+  position: relative;
+}
+
+header .logo img {
+  height: 48px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffccbc;
+}
+
+/* Signup Form */
+.signup-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.signup-form form {
+  background-color: white;
+  padding: 45px 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.signup-form h1 {
+  color: #d32f2f;
+  margin-bottom: 25px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: #d32f2f;
+  outline: none;
+}
+
+.signup-form button {
+  background-color: #d32f2f;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #b71c1c;
+}
+
+.signup-form p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-form a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #c62828;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
